@@ -76,6 +76,11 @@ public class MenuOptionsFrame extends javax.swing.JFrame {
                 selectUMLMouseClicked(evt);
             }
         });
+        selectUML.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectUMLActionPerformed(evt);
+            }
+        });
 
         layerOne.setText("layerOne");
         layerOne.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -90,6 +95,11 @@ public class MenuOptionsFrame extends javax.swing.JFrame {
         });
 
         selectColor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Black", "Red", "Green", "Blue" }));
+        selectColor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selectColorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -194,6 +204,16 @@ public class MenuOptionsFrame extends javax.swing.JFrame {
             System.out.println("Already in Layer 2");
         }     
     }//GEN-LAST:event_layerTwoMouseClicked
+
+    private void selectUMLActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectUMLActionPerformed
+        windowUML w2 = new windowUML();
+    }//GEN-LAST:event_selectUMLActionPerformed
+
+    private void selectColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectColorActionPerformed
+        String msg = "The chosen color is: ";
+        msg = msg + selectColor.getSelectedItem().toString();
+        System.out.println(msg);
+    }//GEN-LAST:event_selectColorActionPerformed
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
