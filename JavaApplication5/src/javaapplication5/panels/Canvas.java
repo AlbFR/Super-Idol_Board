@@ -12,7 +12,7 @@ public class Canvas extends JPanel implements MouseListener {
 
     public Canvas() {
         Border border = BorderFactory.createLineBorder(Color.green, 3);
-        this.setBounds(0, 0, 700, 500);
+        this.setBounds(200, 0, 700, 500);
         this.setBackground(Color.white);
         this.setBorder(border);
         this.addMouseListener(this);
