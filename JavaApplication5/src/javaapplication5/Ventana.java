@@ -2,27 +2,28 @@ package javaapplication5;
 
 import java.awt.*;
 import javax.swing.*;
-import javaapplication5.panels.*;
+// import javaapplication5.panels.*;
+
+import org.w3c.dom.events.MouseEvent;
 
 public class Ventana extends JFrame {
-   JPanel menu;
+   // JPanel menu;
    JPanel canvas;
 
    public Ventana() {
       super();
 
-      menu = new MenuPanel();
+      // menu = new MenuPanel();
       canvas = new javaapplication5.panels.Canvas();
 
-      this.setLayout(new BorderLayout());
+      this.setSize(700, 500);
+      this.setLayout(null);
       this.setTitle("Idol Board");
 
 
-      this.setSize(350, 200);
       this.setVisible(true);
       this.setBackground(Color.WHITE);
-      this.getContentPane().add(menu);
-      this.repaint();
+      this.getContentPane().add(canvas);
       this.setDefaultCloseOperation(EXIT_ON_CLOSE);
       // this.setSize(1150, 700);
    }
